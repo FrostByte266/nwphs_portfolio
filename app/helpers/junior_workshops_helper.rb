@@ -1,0 +1,2 @@
+module JuniorWorkshopsHelper
+end

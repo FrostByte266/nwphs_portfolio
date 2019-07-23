@@ -1,0 +1,2 @@
+module SophomoreProjectsHelper
+end

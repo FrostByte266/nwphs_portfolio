@@ -1,0 +1,2 @@
+module SeniorWorkshopsHelper
+end
