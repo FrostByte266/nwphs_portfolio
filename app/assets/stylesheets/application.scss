@@ -13,20 +13,17 @@
  */
 @import 'bootstrap';
 
-.terminal {
+.terminal-blue {
+  color: #739b9e;
   font-family: Ubuntu Mono;
 }
 
-.terminal-blue {
-  // color: #0026ff;
-  color: #739b9e;
-}
-
 .terminal-green {
-  // color: #4cff00;
   color: #7de031;
+  font-family: Ubuntu Mono;
 }
 
 .terminal-white{
   color: #ffffff;
+  font-family: Ubuntu Mono;
 }
