@@ -1,13 +1,13 @@
 <%= content_for :page_scripts do %>
   <script>
     $(document).ready(function(){
-      $('#title').hide().fadeIn(1000);
+      $('#title').fadeIn(1000);
       $('#carousel').animate({bottom: '-=100'}).css('visibility', 'visible').animate({opacity: 1.0, bottom: '+=100'}, 1000);
     });
   </script>
 <% end %>
 
-<h1 class="text-center display-2" id="title">Driven to discover</h1>
+<h1 class="text-center display-2" id="title" style="display: hidden;">Driven to discover</h1>
 <div class="container">
   <div id="carousel" class="carousel slide hidden" data-ride="carousel">
       <ol class="carousel-indicators">
