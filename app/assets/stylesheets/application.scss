@@ -23,7 +23,12 @@
   font-family: Ubuntu Mono;
 }
 
-.terminal-white{
+.terminal-white {
   color: #ffffff;
   font-family: Ubuntu Mono;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0.0;
 }
