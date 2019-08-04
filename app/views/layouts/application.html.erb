@@ -16,59 +16,53 @@
 
 <header>
   <!-- <div class="container-fluid p-0"> -->
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="<%= root_path %>"><span class="terminal-green">WilliamGrigor@NWPHS</span><span class="terminal-white">:</span><span class="terminal-blue"><%= "~/#{controller_name}/#{action_name} $" %></span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Freshman</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%= url_for :controller => :freshman_projects, :action => :index %>">Projects</a>
-          <a class="dropdown-item" href="<%= url_for :controller => :freshman_workshops, :action => :index %>">Workshops</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sophomore</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%= url_for :controller => :sophomore_projects, :action => :index %>">Projects</a>
-          <a class="dropdown-item" href="<%= url_for :controller => :sophomore_workshops, :action => :index %>">Workshops</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Junior</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%= url_for :controller => :junior_projects, :action => :index %>">Projects</a>
-          <a class="dropdown-item" href="<%= url_for :controller => :junior_workshops, :action => :index %>">Workshops</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Senior</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%= url_for :controller => :senior_projects, :action => :index %>">Projects</a>
-          <a class="dropdown-item" href="<%= url_for :controller => :senior_workshops, :action => :index %>">Workshops</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About me</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%= url_for :controller => :about, :action => :myself %>">About myself</a>
-          <a class="dropdown-item" href="<%= url_for :controller => :about, :action => :competitions %>">Competitions</a>
-          <a class="dropdown-item" href="<%= url_for :controller => :about, :action => :certificates %>">Certificates</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%= url_for :controller => :home, :action => :welcome %>">Home</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<!-- </div> -->
+  <body style="background-color: #a9a9a9;">
+      <nav class="navbar navbar-dark navbar-expand-md sticky-top" style="background-color: #000000;">
+          <div class="container-fluid"><a class="navbar-brand" href="<%= root_path %>"><span class="terminal-green">WilliamGrigor@NWPHS</span><span class="terminal-white">:</span><span class="terminal-blue"><%= "~/#{controller_name}/#{action_name}" %></span><span class="terminal-white"> $</span></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse"
+                  id="navcol-1">
+                  <ul class="nav navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Freshman</a>
+                          <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :freshman_projects, :action => :index %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :freshman_workshops, :action => :index %>">Workshops</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Sophomore</a>
+                          <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :sophomore_projects, :action => :index %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :sophomore_workshops, :action => :index %>">Workshops</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Junior</a>
+                          <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :junior_projects, :action => :index %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :junior_workshops, :action => :index %>">Workshops</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Senior</a>
+                          <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :senior_projects, :action => :index %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :senior_workshops, :action => :index %>">Workshops</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">About me</a>
+                          <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :about, :action => :myself %>">About myself</a>
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :about, :action => :competitions %>">Competitions</a>
+                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :about, :action => :cet %>">Certifications</a>
+                          </div>
+                      </li>
+                      <li class="nav-item" role="presentation"><a class="nav-link text-white" href="<%= root_path %>">Home</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
 </header>
 <body>
   <%= yield %>
