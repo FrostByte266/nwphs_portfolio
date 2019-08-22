@@ -15,47 +15,46 @@
 </head>
 
 <header>
-  <!-- <div class="container-fluid p-0"> -->
   <body style="background-color: #a9a9a9;">
       <nav class="navbar navbar-dark navbar-expand-md sticky-top" style="background-color: #000000;">
-          <div class="container-fluid"><a class="navbar-brand" href="<%= root_path %>"><span class="terminal-green">WilliamGrigor@NWPHS</span><span class="terminal-white">:</span><span class="terminal-blue"><%= "~/#{controller_name}/#{action_name}" %></span><span class="terminal-white"> $</span></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+          <div class="container-fluid"><a class="navbar-brand" href="<%= root_path %>"><span class="terminal-green">WilliamGrigor@NWPHS</span><span class="terminal-white">:</span><span class="terminal-blue"><%= "~#{request.fullpath}" %></span><span class="terminal-white"> $</span></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse"
                   id="navcol-1">
                   <ul class="nav navbar-nav ml-auto">
                       <li class="nav-item dropdown">
                         <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Freshman</a>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :freshman_projects, :action => :index %>">Projects</a>
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :freshman_workshops, :action => :index %>">Workshops</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_freshman_projects_path %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_freshman_workshops_path %>">Workshops</a>
                           </div>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Sophomore</a>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :sophomore_projects, :action => :index %>">Projects</a>
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :sophomore_workshops, :action => :index %>">Workshops</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_sophomore_projects_path %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_sophomore_workshops_path %>">Workshops</a>
                           </div>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Junior</a>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :junior_projects, :action => :index %>">Projects</a>
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :junior_workshops, :action => :index %>">Workshops</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_junior_projects_path %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_junior_workshops_path %>">Workshops</a>
                           </div>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">Senior</a>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :senior_projects, :action => :index %>">Projects</a>
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :senior_workshops, :action => :index %>">Workshops</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_senior_projects_path %>">Projects</a>
+                            <a class="dropdown-item" role="presentation" href="<%= grades_senior_workshops_path %>">Workshops</a>
                           </div>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#">About me</a>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :about, :action => :myself %>">About myself</a>
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :about, :action => :competitions %>">Competitions</a>
-                            <a class="dropdown-item" role="presentation" href="<%= url_for :controller => :about, :action => :cet %>">Certifications</a>
+                            <a class="dropdown-item" role="presentation" href="<%= about_myself_path %>">About myself</a>
+                            <a class="dropdown-item" role="presentation" href="<%= about_competitions_path %>">Competitions</a>
+                            <a class="dropdown-item" role="presentation" href="<%= about_certificates_path %>">Certifications</a>
                           </div>
                       </li>
                       <li class="nav-item" role="presentation"><a class="nav-link text-white" href="<%= root_path %>">Home</a></li>
