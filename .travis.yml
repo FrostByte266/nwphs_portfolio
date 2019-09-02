@@ -3,13 +3,8 @@ language: ruby
 rvm:
   - 2.6.3
 
-services:
-  - docker
-
 before_install:
-  - docker build -t portfolio .
-  - docker run -d --name portfolio_container portfolio
-  - docker exec -t portfolio_container /bin/sh -c "cd myapp; bundle exec rake test"
+  - bundle install
 
 script:
   - bundle exec rake test
