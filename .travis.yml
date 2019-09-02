@@ -8,7 +8,6 @@ services:
 
 before_install:
   - docker-compose build
-  - docker-compose up
 
 script:
   - rails test
