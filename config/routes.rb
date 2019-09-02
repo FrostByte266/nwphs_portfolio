@@ -11,19 +11,35 @@ Rails.application.routes.draw do
   namespace :grades do
     namespace :freshman do
       get '/projects', to: 'projects#index'
+      scope :projects do
+      end
       get '/workshops', to: 'workshops#index'
+      scope :workshops do
+      end
     end
     namespace :sophomore do
       get '/projects', to: 'projects#index'
+      scope :projects do
+      end
       get '/workshops', to: 'workshops#index'
+      scope :workshops do
+      end
     end
     namespace :junior do
       get '/projects', to: 'projects#index'
+      scope :projects do
+      end
       get '/workshops', to: 'workshops#index'
+      scope :workshops do
+      end
     end
     namespace :senior do
       get '/projects', to: 'projects#index'
+      scope :projects do
+      end
       get '/workshops', to: 'workshops#index'
+      scope :workshops do
+      end
     end
   end
 end
