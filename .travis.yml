@@ -9,6 +9,7 @@ services:
 before_install:
   - docker build -t portfolio .
   - docker run -d --name portfolio_container portfolio
+  - docker exec -t portfolio_container /bin/sh -c "cd myapp; bundle exec rake test"
 
 script:
-  - docker exec -t portfolio_container rails test
+  - bundle exec rake test
