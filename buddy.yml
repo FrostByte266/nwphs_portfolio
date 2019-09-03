@@ -1,0 +1,18 @@
+- pipeline: "Testing"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "master"
+  ref_type: "BRANCH"
+  trigger_condition: "ALWAYS"
+  actions:
+  - action: "Build Docker image"
+    type: "DOCKERFILE"
+    dockerfile_path: "Dockerfile"
+    trigger_condition: "ALWAYS"
+  - action: "Run: rails test"
+    type: "RUN_DOCKER_CONTAINER"
+    use_image_from_action: true
+    inline_commands: "rails test"
+    mount_filesystem_disable: true
+    mount_filesystem_path: "/buddy/nwphs-portfolio"
+    shell: "SH"
+    trigger_condition: "ALWAYS"
