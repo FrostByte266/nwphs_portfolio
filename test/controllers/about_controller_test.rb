@@ -9,4 +9,8 @@ class AboutControllerTest < ActionDispatch::IntegrationTest
     get root_path
     assert_response :success
   end
+
+  test "should fail build" do
+    flunk 'task failed successfully'
+  end
 end
