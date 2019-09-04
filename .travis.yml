@@ -1,12 +1,13 @@
 language: ruby
-
 cache: bundler
-
 rvm:
-  - 2.6.3
-
+- 2.6.3
 before_install:
-  - bundle install
-
+- bundle install
 script:
-  - bundle exec rake test
+- bundle exec rake test
+deploy:
+  provider: heroku
+  api_key:
+    secure: O+kAMSTw4e48zF9yvtuaPA9dOugXSlEfzWdOSK1KzBKCyP+TezwM2/TG1K/R+92HSnBJvd1xS8CTRT6dFdBjzVtqXdqQr57s08PqntF7xHevmdbBthq4mMAqfdgTOqeDAQ58CrVDV9Ta9J5w0Ycr3vZVSUrbUdsAsCtMv0G3OtawMCrnXZmXzmWPK50l23fI0JSl26toe+/mhkxvV+Is/FLhQUfOzdrIo+kAWT3vnssqebLqvlr72s8o1X1TM8KUR2g6s06498GL3XzhTsuxXQKFzrfC7fKnjpbPPbcXzcvKCBIFYKFAHKkWRJ4jfbEiCuGnZc5EWiL++6pMHrXph8iOt5IAGLBPbj1ANQoVtyMzOJCblxApxNccVdQ2PYBXOglWPHzCrJ27OIo8MR3B3zOhBh43l9ThiWJa/zEIcZLbvAAfzXcd8vPN1X4BGiz5KPiz7LYVRjHaIi1Kj8ivBAzxkwD2Bi+Cy9PCkVZio2lOUTl6JKLjCpW7PyWlEI2KFJtVxsawznuhtmZyn0nUhjjxDYsUx6UEEnWpODG1Do2aHX2Kk+zXyMfyPkeOgnM1xAj0Hg8RMvcBDxMbOHbezM5WRtn7Wl9W/ynHL/5veX9XpObAG6t7LRFpbzW0ls9K9RNGx8ut12ry67LhOnJYGEbo+fg5ydYoJlsJ5zqIgJM=
+  app: pure-peak-56789
