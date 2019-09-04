@@ -1,5 +1,5 @@
 - pipeline: "Testing"
-  trigger_mode: "ON_EVERY_PUSH"
+  trigger_mode: "MANUAL"
   ref_name: "master"
   ref_type: "BRANCH"
   trigger_condition: "ALWAYS"
