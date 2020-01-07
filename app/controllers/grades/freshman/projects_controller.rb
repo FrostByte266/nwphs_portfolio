@@ -4,9 +4,6 @@ module Grades
       def index
 
       end
-
-      def nfc
-      end
     end
   end
 end
